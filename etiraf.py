@@ -44,7 +44,7 @@ async def start(event):
   if event.is_private:
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await client.send_message(log_qrup, f"ℹ️ **Yeni istifadəçi -** {ad}")
+     await client.send_message(log_qrup, f"ℹ️ **Yeni kullanıcı -** {ad}")
      return await event.reply(f"{ad} {startmesaj}", buttons=(
                       [
                        Button.inline("💌 Etiraf Yaz", data="etiraf")
